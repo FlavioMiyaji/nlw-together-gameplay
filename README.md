@@ -15,7 +15,13 @@ NLW Together - Game Play. ReactNative Mobile App.
   - [x] Instalar o App "Expo Go" no celular
   - [x] <code>expo init gameplay</code>
   - [x] blank (TypeScript)
-  - [ ] <code>expo start</code>
-    - [ ] Press d | show developer tools
-  - [ ] 
-- [ ] 
+  - [x] <code>expo start</code>
+    - [x] Press d | show developer tools
+  - [x] "App.tsx": mudar texto para Hello World.
+
+- [x] Segundo Commit
+  - [x] Create a Splach Screen - Expo Documentation
+  - [x] Adicionar imagens: https://drive.google.com/drive/folders/1RJbqN6XWxz2Tlj3a3Qi0XLteR9pAirLW?usp=sharing
+  - [x] Adding SignIn page.
+
+# Aula 2 - 21/06/2021
