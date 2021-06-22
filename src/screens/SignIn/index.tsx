@@ -18,11 +18,6 @@ export function SignIn() {
   }, []);
   return (
     <View style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="tansparent"
-        translucent
-      />
       <Image
         source={Illustration}
         style={styles.illustration}
@@ -30,7 +25,7 @@ export function SignIn() {
       />
       <View style={styles.content}>
         <Text style={styles.title}>
-          {`Organize\nsuas jogatinas\nfacilmente`}
+          {`Conecte-se\ne organize suas\njogatinas`}
         </Text>
         <Text style={styles.subtitle}>
           {`Crie grupos para jogar seus games\nfavoritos com seus amigos`}
