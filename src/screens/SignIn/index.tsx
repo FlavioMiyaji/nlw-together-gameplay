@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, {
   useCallback,
 } from 'react';
@@ -13,8 +14,9 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './styles';
 
 export function SignIn() {
+  const navigarion = useNavigation();
   const handleSignIn = useCallback(() => {
-
+    navigarion.navigate('Home');
   }, []);
   return (
     <View style={styles.container}>
