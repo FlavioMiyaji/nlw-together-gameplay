@@ -6,17 +6,25 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 24,
-    marginBottom: 24,
+    alignItems: 'center'
   },
-  title: {
+  username: {
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
     fontSize: 18,
   },
-  subtitle: {
-    fontFamily: theme.fonts.title700,
+  status: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  statusBullet: {
+    width: 8,
+    height: 8,
+    borderRadius: 4,
+    marginRight: 9,
+  },
+  nameStatus: {
+    fontFamily: theme.fonts.text400,
     color: theme.colors.highlight,
     fontSize: 13,
   },
