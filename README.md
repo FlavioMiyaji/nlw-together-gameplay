@@ -62,3 +62,7 @@ NLW Together - Game Play. ReactNative Mobile App.
       - [x] <code>yarn add --dev react-native-svg-transformer</code>
     - [x] Criando caregorias
     - [x] Criando partidas agendadas
+
+# Aula 3 - 23/06/2021 - 
+- [x] Criando a tela de detalhes de agendamento
+- [X] Criando a tela agendamento de patidas
