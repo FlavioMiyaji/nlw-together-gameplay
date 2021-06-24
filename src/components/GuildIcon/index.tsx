@@ -8,10 +8,13 @@ type Props = {
 };
 
 export function GuildIcon({ uri }: Props) {
+  if (!uri) {
+    return <View style={styles.container} />
+  }
   return (
     <Image
       style={styles.container}
-      source={{ uri: !uri ? 'https://github.com/FlavioMiyaji.png' : uri }}
+      source={{ uri }}
       resizeMode="cover"
     />
   );

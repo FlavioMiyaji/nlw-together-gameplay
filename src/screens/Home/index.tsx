@@ -32,7 +32,7 @@ export function Home() {
     guild: {
       id: '1',
       name: 'Lendários',
-      icon: '',
+      icon: 'https://github.com/FlavioMiyaji.png',
       owner: true,
     },
     category: '1',
@@ -43,7 +43,7 @@ export function Home() {
     guild: {
       id: '2',
       name: 'Lendários',
-      icon: '',
+      icon: 'https://github.com/FlavioMiyaji.png',
       owner: true,
     },
     category: '1',
@@ -53,12 +53,15 @@ export function Home() {
   const handleAppointmentDetails = () => {
     navigation.navigate('AppointmentDetails');
   };
+  const handleAppointmentCreate = () => {
+    navigation.navigate('AppointmentCreate');
+  };
   return (
     <Background>
       <View style={styles.container}>
         <View style={styles.header}>
           <Profile />
-          <ButtonAdd />
+          <ButtonAdd onPress={handleAppointmentCreate} />
         </View>
         <CategorySelect
           caregorySelected={category}
