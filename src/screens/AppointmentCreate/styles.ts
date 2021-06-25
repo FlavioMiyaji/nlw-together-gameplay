@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,
+    marginVertical: 18,
   },
   form: {
     paddingTop: 32,
@@ -34,12 +35,17 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 30,
+  },
+  labels: {
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    marginVertical: 18,
   },
   fields: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 18,
+    justifyContent: 'space-between',
   },
   divider: {
     marginHorizontal: 8,
@@ -51,5 +57,8 @@ export const styles = StyleSheet.create({
     fontSize: 13,
     fontFamily: theme.fonts.text400,
     color: theme.colors.highlight,
+  },
+  footer: {
+    paddingHorizontal: 24,
   },
 });

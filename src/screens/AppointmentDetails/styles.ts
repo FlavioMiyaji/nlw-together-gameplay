@@ -30,10 +30,10 @@ export const styles = StyleSheet.create({
     paddingTop: 30,
   },
   menbers: {
+    paddingVertical: 24,
     paddingLeft: 24,
   },
   footer: {
     paddingHorizontal: 24,
-    paddingVertical: 20,
   },
 });

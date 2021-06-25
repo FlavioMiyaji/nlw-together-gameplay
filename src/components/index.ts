@@ -1,6 +1,7 @@
 import { Appointment, AppointmentProps } from './Appointment';
 import { Avatar } from './Avatar';
 import { Background } from './Background';
+import { Button } from './Button';
 import { ButtonAdd } from './ButtonAdd';
 import { ButtonIcon } from './ButtonIcon';
 import { Category } from './Category';
@@ -19,6 +20,7 @@ export {
   AppointmentProps,
   Avatar,
   Background,
+  Button,
   ButtonAdd,
   ButtonIcon,
   Category,

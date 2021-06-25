@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
     marginTop: 42,
   },
   matches: {
+    paddingVertical: 24,
     marginLeft: 24,
   },
 });

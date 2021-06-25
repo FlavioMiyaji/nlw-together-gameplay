@@ -23,17 +23,12 @@ import { theme } from '../../global/styles/theme';
 
 export function AppointmentDetails() {
   const handleShare = () => { };
-  const menbers = [{
-    id: '1',
+  const menbers = Array.from({ length: 10 }, (_, index) => ({
+    id: `${index}`,
     username: 'Flávio',
     avatar_url: 'https://github.com/FlavioMiyaji.png',
-    status: 'online',
-  }, {
-    id: '2',
-    username: 'Flávio',
-    avatar_url: 'https://github.com/FlavioMiyaji.png',
-    status: 'offline',
-  }];
+    status: ((index + 1) % 2 == 0) ? 'offline' : 'online',
+  }));
   return (
     <Background>
       <Header
@@ -69,7 +64,7 @@ export function AppointmentDetails() {
           subtitle="Total 3"
         />
         <FlatList
-          style={styles.menbers}
+          contentContainerStyle={styles.menbers}
           data={menbers}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
@@ -77,11 +72,11 @@ export function AppointmentDetails() {
           )}
           ItemSeparatorComponent={() => <ListDivider />}
         />
-        <View style={styles.footer}>
-          <ButtonIcon
-            title="Entrar na partida"
-          />
-        </View>
+      </View>
+      <View style={styles.footer}>
+        <ButtonIcon
+          title="Entrar na partida"
+        />
       </View>
     </Background>
   );

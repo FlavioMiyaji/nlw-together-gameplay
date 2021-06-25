@@ -27,8 +27,8 @@ export function Home() {
   const handleCategorySelect = useCallback((categoryId: string) => {
     setCategory(categoryId === category ? '' : categoryId)
   }, [category, setCategory]);
-  const appointments: AppointmentProps[] = [{
-    id: '1',
+  const appointments: AppointmentProps[] = Array.from({ length: 10 }, (_, index) => ({
+    id: `${index}`,
     guild: {
       id: '1',
       name: 'Lendários',
@@ -38,18 +38,7 @@ export function Home() {
     category: '1',
     date: '22/06 às 20:40',
     description: 'É hoje que vamos ao challenger sem perder uma partida no md10',
-  }, {
-    id: '2',
-    guild: {
-      id: '2',
-      name: 'Lendários',
-      icon: 'https://github.com/FlavioMiyaji.png',
-      owner: true,
-    },
-    category: '1',
-    date: '22/06 às 20:40',
-    description: 'É hoje que vamos ao challenger sem perder uma partida no md10',
-  }];
+  }));
   const handleAppointmentDetails = () => {
     navigation.navigate('AppointmentDetails');
   };
@@ -73,7 +62,7 @@ export function Home() {
             subtitle="Total 6"
           />
           <FlatList
-            style={styles.matches}
+            contentContainerStyle={styles.matches}
             data={appointments}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
