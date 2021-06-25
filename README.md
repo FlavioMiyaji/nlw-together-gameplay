@@ -10,6 +10,8 @@ NLW Together - Game Play. ReactNative Mobile App.
   - O universo é infinito, não existem limites para o que podemos construir, a evolução é necessária, não existe inércia, precisamos estar sempre em busca do próximo nível porque a tecnologia não para de evoluir.
 - [ ] 4. #legacy
   - Nos importamos com o legado. É sobre isso. Sobre fazer parte da solução, fazer a diferença no mundo através das linhas de código. Contruir soluções que deixem o mundo melhor, mais próspero.
+- [ ] 5. juntos no próximo nível
+  - Chegamos ao fim de mais uma edição e agora, em um novo nível, cravamos a nossa bandeira. Parabéns por chegar até aqui. Com tudo o que a gente viu nessas 5 aulas práticas e com base em todos os feedbacks, eu tenho certeza que você avoluiu muito. Então comemore o momento e lembre-se: O aprendizado é contínuo e sempre haverá um próximo nível.
 
 # Aula 1 - 21/06/2021
 
@@ -68,4 +70,5 @@ NLW Together - Game Play. ReactNative Mobile App.
 
 # Aula 3 - 23/06/2021 - 24/06/2021
 - [x] Criando a tela de detalhes de agendamento
-- [X] Criando a tela agendamento de patidas
+- [x] Criando a tela agendamento de patidas
+- [x] 1:32:11
