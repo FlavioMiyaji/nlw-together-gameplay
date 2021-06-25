@@ -11,6 +11,8 @@ import {
   Header,
   CategorySelect,
   GuildIcon,
+  SmallInput,
+  TextArea,
 } from '../../components';
 
 import { styles } from './styles';
@@ -26,7 +28,15 @@ export function AppointmentCreate() {
       <Header
         title="Agendar partida"
       />
-      <Text style={styles.label}>Categoria</Text>
+      <Text
+        style={[styles.label, {
+          marginTop: 36,
+          marginHorizontal: 24,
+          marginBottom: 18,
+        }]}
+      >
+        Categoria
+      </Text>
       <CategorySelect
         hasCheckBox
         caregorySelected={category}
@@ -46,7 +56,47 @@ export function AppointmentCreate() {
             />
           </View>
         </RectButton>
+        <View style={styles.horarios}>
+          <View>
+            <Text style={styles.label} >
+              Dia e mês
+            </Text>
+            <View style={styles.fields}>
+              <SmallInput maxLength={2} />
+              <Text style={styles.divider} >/</Text>
+              <SmallInput maxLength={2} />
+            </View>
+          </View>
+          <View>
+            <Text style={styles.label} >
+              Hora e minuto
+            </Text>
+            <View style={styles.fields}>
+              <SmallInput maxLength={2} />
+              <Text style={styles.divider} >:</Text>
+              <SmallInput maxLength={2} />
+            </View>
+          </View>
+        </View>
+        <View>
+          <Text
+            style={[styles.label, {
+              marginTop: 18,
+            }]}
+          >
+            Descrição
+          </Text>
+          <Text style={styles.caracterLimits}>
+            max 100 caracteres
+          </Text>
+        </View>
+        <TextArea
+          multiline
+          maxLength={100}
+          numberOfLines={5}
+          autoCorrect={false}
+        />
       </View>
-    </Background>
+    </Background >
   );
 };

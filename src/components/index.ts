@@ -11,6 +11,8 @@ import { ListDivider } from './ListDivider';
 import { ListHeader } from './ListHeader';
 import { Member, MemberProps } from './Member';
 import { Profile } from './Profile';
+import { SmallInput } from './SmallInput';
+import { TextArea } from './TextArea';
 
 export {
   Appointment,
@@ -28,4 +30,6 @@ export {
   Member,
   MemberProps,
   Profile,
+  SmallInput,
+  TextArea,
 };
