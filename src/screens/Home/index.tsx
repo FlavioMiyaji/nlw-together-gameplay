@@ -25,8 +25,8 @@ export function Home() {
   const [category, setCategory] = useState('');
   const navigation = useNavigation();
   const handleCategorySelect = useCallback((categoryId: string) => {
-    setCategory(categoryId === category ? '' : categoryId)
-  }, [category, setCategory]);
+    setCategory(category => categoryId === category ? '' : categoryId)
+  }, []);
   const appointments: AppointmentProps[] = Array.from({ length: 10 }, (_, index) => ({
     id: `${index + 1}`,
     guild: {

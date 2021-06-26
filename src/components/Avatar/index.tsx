@@ -11,14 +11,16 @@ type Props = {
 
 export function Avatar({ uri }: Props) {
   const { secondary50, secondary70 } = theme.colors;
+  const colors = [secondary50, secondary70];
+  if (!uri) {
+    return (<LinearGradient style={styles.container} colors={colors} />);
+  }
   return (
-    <LinearGradient
-      style={styles.container}
-      colors={[secondary50, secondary70]}
-    >
+    <LinearGradient style={styles.container} colors={colors} >
       <Image
         style={styles.avatar}
         source={{ uri }}
+        resizeMode="cover"
       />
     </LinearGradient>
   );

@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     height: '100%',
     borderColor: theme.colors.secondary40,
     borderBottomWidth: 1,
+    marginLeft: 16,
   },
   header: {
     width: '100%',

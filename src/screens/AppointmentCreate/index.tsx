@@ -28,9 +28,7 @@ export function AppointmentCreate() {
   const [category, setCategory] = useState('');
   const [guild, setGuild] = useState<GuildProps>();
   const [openGuilds, setOpenGuilds] = useState(false);
-  const handleCategorySelect = useCallback((categoryId: string) => {
-    setCategory(category => categoryId === category ? '' : categoryId)
-  }, []);
+  const handleCategorySelect = useCallback((categoryId: string) => setCategory(categoryId), []);
   const handleOpenGuilds = useCallback(() => setOpenGuilds(true), []);
   const handleCloseGuilds = useCallback(() => setOpenGuilds(false), []);
   const handleGuildSelect = useCallback((guild: GuildProps) => {
