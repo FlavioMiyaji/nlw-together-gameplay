@@ -9,14 +9,9 @@ import { GuildLogo } from '../GuildLogo';
 import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 
-import { styles } from './styles';
+import { GuildProps } from '../Guild';
 
-export type GuildProps = {
-  id: string;
-  name: string;
-  logo_uri?: string;
-  owner: boolean;
-};
+import { styles } from './styles';
 
 export type AppointmentProps = {
   id: string;

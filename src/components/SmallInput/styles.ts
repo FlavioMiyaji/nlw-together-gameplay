@@ -12,5 +12,7 @@ export const styles = StyleSheet.create({
     fontSize: 13,
     textAlign: 'center',
     justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: theme.colors.secondary50,
   },
 });

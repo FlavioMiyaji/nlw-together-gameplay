@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   guilds: {
-    paddingVertical: 24,
-    paddingLeft: 24,
+    padding: 24,
+    paddingTop: 56,
   },
 });

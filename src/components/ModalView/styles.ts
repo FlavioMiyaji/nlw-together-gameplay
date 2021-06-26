@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: getStatusBarHeight() + 100,
+    overflow: "hidden",
+    borderRadius: 16,
   },
   bar: {
     width: 39,
@@ -17,6 +19,6 @@ export const styles = StyleSheet.create({
     borderRadius: 2,
     backgroundColor: theme.colors.secondary30,
     alignSelf: 'center',
-    marginTop: 13,
+    marginVertical: 16,
   },
 });

@@ -21,4 +21,8 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginHorizontal: 16,
   },
+  action: {
+    width: 24,
+    height: 24,
+  },
 });
