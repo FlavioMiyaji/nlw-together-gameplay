@@ -28,14 +28,14 @@ export function Home() {
     setCategory(categoryId === category ? '' : categoryId)
   }, [category, setCategory]);
   const appointments: AppointmentProps[] = Array.from({ length: 10 }, (_, index) => ({
-    id: `${index}`,
+    id: `${index + 1}`,
     guild: {
-      id: '1',
-      name: 'Lendários',
+      id: `${index + 1}`,
+      name: `Guild Lendários ${index + 1}`,
       logo_uri: 'https://github.com/FlavioMiyaji.png',
-      owner: true,
+      owner: ((index + 1) % 2 == 0),
     },
-    category: '1',
+    category: `${((index + 1) % 4)}`,
     date: '22/06 às 20:40',
     description: 'É hoje que vamos ao challenger sem perder uma partida no md10',
   }));
@@ -59,7 +59,7 @@ export function Home() {
         <View style={styles.content}>
           <ListHeader
             title="Partida agendadas"
-            subtitle="Total 6"
+            subtitle={`Total ${appointments.length}`}
           />
           <FlatList
             contentContainerStyle={styles.matches}

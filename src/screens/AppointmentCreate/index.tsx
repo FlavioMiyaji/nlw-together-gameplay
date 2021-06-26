@@ -117,6 +117,7 @@ export function AppointmentCreate() {
           onDismiss={handleCloseGuilds}
         >
           <Guilds
+            selectedGuild={guild}
             onSelectGuild={handleGuildSelect}
           />
         </ModalView>

@@ -21,15 +21,17 @@ export type GuildProps = {
 
 type Props = TouchableOpacityProps & {
   data: GuildProps;
+  selected: boolean;
 };
 
-export function Guild({ data, ...rest }: Props) {
+export function Guild({ data, selected, ...rest }: Props) {
   const {
     id,
     name,
     logo_uri,
     owner,
   } = data;
+  const { heading, highlight, on } = theme.colors;
   return (
     <TouchableOpacity
       style={styles.container}
@@ -38,14 +40,18 @@ export function Guild({ data, ...rest }: Props) {
     >
       <GuildLogo uri={logo_uri} />
       <View style={styles.content}>
-        <Text style={styles.title}>
+        <Text style={[styles.title, {
+          color: !selected ? heading : on,
+        }]}>
           {name}
         </Text>
-        <Text style={styles.owner}>{!owner ? 'Convidado' : 'Admnistrador'}</Text>
+        <Text style={[styles.owner, {
+          color: !selected ? highlight : on,
+        }]}>{!owner ? 'Convidado' : 'Admnistrador'}</Text>
       </View>
       <Feather
-        name="chevron-right"
-        color={theme.colors.heading}
+        name={!selected ? 'chevron-right' : 'check-circle'}
+        color={!selected ? heading : on}
         size={24}
       />
     </TouchableOpacity>

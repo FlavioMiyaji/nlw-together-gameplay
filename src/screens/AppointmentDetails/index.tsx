@@ -24,8 +24,8 @@ import { theme } from '../../global/styles/theme';
 export function AppointmentDetails() {
   const handleShare = () => { };
   const members = Array.from({ length: 10 }, (_, index) => ({
-    id: `${index}`,
-    username: 'Flávio',
+    id: `${index + 1}`,
+    username: `Flávio ${index + 1}`,
     avatar_uri: 'https://github.com/FlavioMiyaji.png',
     status: ((index + 1) % 2 == 0) ? 'offline' : 'online',
   }));
@@ -61,7 +61,7 @@ export function AppointmentDetails() {
       <View style={styles.container}>
         <ListHeader
           title="Jogadores"
-          subtitle="Total 3"
+          subtitle={`Total ${members.length}`}
         />
         <FlatList
           contentContainerStyle={styles.members}
