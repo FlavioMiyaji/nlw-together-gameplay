@@ -79,7 +79,7 @@ NLW Together - Game Play. ReactNative Mobile App.
 - [x] Reaproveitando componentes
 
 # Aula 4 - 25/06/2021 - 26/06/2021
-- [x] Refactor
+- [x] Refactor 30:03
 - [ ] Contexto
 - [ ] Autenticação com o OAuth2
 - [ ] Rotas Públic
