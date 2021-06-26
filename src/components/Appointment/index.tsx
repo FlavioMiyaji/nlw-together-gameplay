@@ -1,10 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+import { Feather } from '@expo/vector-icons';
 
 import { theme } from '../../global/styles/theme';
 import { categories } from '../../utils/categories';
-import { GuildIcon } from '../GuildIcon';
+import { GuildLogo } from '../GuildLogo';
 import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 
@@ -13,7 +14,7 @@ import { styles } from './styles';
 export type GuildProps = {
   id: string;
   name: string;
-  icon?: string;
+  logo_uri?: string;
   owner: boolean;
 };
 
@@ -38,7 +39,7 @@ export function Appointment({ data, ...rest }: Props) {
     description,
   } = data;
   const {
-    icon,
+    logo_uri,
     name,
     owner,
   } = guild;
@@ -47,7 +48,7 @@ export function Appointment({ data, ...rest }: Props) {
   return (
     <RectButton {...rest} >
       <View style={styles.container}>
-        <GuildIcon uri={icon} />
+        <GuildLogo uri={logo_uri} />
         <View style={styles.content}>
           <View style={styles.header}>
             <Text style={styles.title}>{name}</Text>
@@ -66,6 +67,11 @@ export function Appointment({ data, ...rest }: Props) {
             </View>
           </View>
         </View>
+        <Feather
+          name="chevron-right"
+          color={theme.colors.heading}
+          size={24}
+        />
       </View>
     </RectButton>
   );

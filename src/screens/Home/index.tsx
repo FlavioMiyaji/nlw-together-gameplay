@@ -32,7 +32,7 @@ export function Home() {
     guild: {
       id: '1',
       name: 'Lendários',
-      icon: 'https://github.com/FlavioMiyaji.png',
+      logo_uri: 'https://github.com/FlavioMiyaji.png',
       owner: true,
     },
     category: '1',

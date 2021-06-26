@@ -12,20 +12,31 @@ import {
   Background,
   Header,
   CategorySelect,
-  GuildIcon,
+  GuildLogo,
   SmallInput,
   TextArea,
   Button,
+  ModalView,
 } from '../../components';
 
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
+import { Guilds } from '../Guilds';
+import { GuildProps } from '../../components/Guild';
 
 export function AppointmentCreate() {
   const [category, setCategory] = useState('');
+  const [guild, setGuild] = useState<GuildProps>();
+  const [openGuilds, setOpenGuilds] = useState(false);
   const handleCategorySelect = useCallback((categoryId: string) => {
-    setCategory(categoryId === category ? '' : categoryId)
-  }, [category, setCategory]);
+    setCategory(category => categoryId === category ? '' : categoryId)
+  }, []);
+  const handleOpenGuilds = useCallback(() => setOpenGuilds(true), []);
+  const handleCloseGuilds = useCallback(() => setOpenGuilds(false), []);
+  const handleGuildSelect = useCallback((guild: GuildProps) => {
+    setGuild(guild);
+    setOpenGuilds(false);
+  }, []);
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -49,11 +60,15 @@ export function AppointmentCreate() {
             onSelect={handleCategorySelect}
           />
           <View style={styles.form}>
-            <RectButton>
+            <RectButton onPress={handleOpenGuilds}>
               <View style={styles.select}>
-                <GuildIcon />
+                <GuildLogo uri={guild?.logo_uri} />
                 <View style={styles.selectBory}>
-                  <Text style={styles.label}>Selecione um servidor</Text>
+                  {(!guild) ? (
+                    <Text style={styles.label}>Selecione um servidor</Text>
+                  ) : (
+                      <Text style={styles.label}>{guild.name}</Text>
+                    )}
                 </View>
                 <Feather
                   name="chevron-right"
@@ -97,6 +112,14 @@ export function AppointmentCreate() {
             title="Agendar partida"
           />
         </View>
+        <ModalView
+          visible={openGuilds}
+          onDismiss={handleCloseGuilds}
+        >
+          <Guilds
+            onSelectGuild={handleGuildSelect}
+          />
+        </ModalView>
       </Background >
     </KeyboardAvoidingView>
   );

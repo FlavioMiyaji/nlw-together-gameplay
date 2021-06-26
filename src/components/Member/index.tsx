@@ -9,7 +9,7 @@ import { styles } from './styles';
 export type MemberProps = {
   id: string;
   username: string;
-  avatar_url: string;
+  avatar_uri: string;
   status: string;
 };
 
@@ -21,7 +21,7 @@ export function Member({ data }: Props) {
   const {
     id,
     username,
-    avatar_url,
+    avatar_uri,
     status,
   } = data;
   const isOnline = status === 'online';
@@ -29,8 +29,8 @@ export function Member({ data }: Props) {
   const statusColor = !isOnline ? primary : on;
   return (
     <View style={styles.container}>
-      <Avatar urlImage={avatar_url} />
-      <View>
+      <Avatar uri={avatar_uri} />
+      <View style={styles.content}>
         <Text style={styles.username}>
           {username}
         </Text>

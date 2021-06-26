@@ -6,10 +6,10 @@ import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 
 type Props = {
-  urlImage: string;
+  uri: string;
 };
 
-export function Avatar({ urlImage }: Props) {
+export function Avatar({ uri }: Props) {
   const { secondary50, secondary70 } = theme.colors;
   return (
     <LinearGradient
@@ -18,7 +18,7 @@ export function Avatar({ urlImage }: Props) {
     >
       <Image
         style={styles.avatar}
-        source={{ uri: urlImage }}
+        source={{ uri }}
       />
     </LinearGradient>
   );

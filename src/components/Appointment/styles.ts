@@ -5,10 +5,14 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    paddingRight: 16,
   },
   content: {
     flex: 1,
+    height: '100%',
+    borderColor: theme.colors.secondary40,
+    borderBottomWidth: 1,
   },
   header: {
     width: '100%',
@@ -27,6 +31,7 @@ export const styles = StyleSheet.create({
     marginRight: 24,
   },
   footer: {
+    marginTop: 8,
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -36,6 +41,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   date: {
+    marginLeft: 8,
     fontFamily: theme.fonts.text500,
     color: theme.colors.heading,
     fontSize: 13,

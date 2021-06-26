@@ -7,7 +7,7 @@ type Props = {
   uri?: string;
 };
 
-export function GuildIcon({ uri }: Props) {
+export function GuildLogo({ uri }: Props) {
   if (!uri) {
     return <View style={styles.container} />
   }

@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 30,
   },
-  menbers: {
+  members: {
     paddingVertical: 24,
     paddingLeft: 24,
   },

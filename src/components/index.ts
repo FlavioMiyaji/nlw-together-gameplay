@@ -6,11 +6,13 @@ import { ButtonAdd } from './ButtonAdd';
 import { ButtonIcon } from './ButtonIcon';
 import { Category } from './Category';
 import { CategorySelect } from './CategorySelect';
-import { GuildIcon } from './GuildIcon';
+import { Guild } from './Guild';
+import { GuildLogo } from './GuildLogo';
 import { Header } from './Header';
 import { ListDivider } from './ListDivider';
 import { ListHeader } from './ListHeader';
 import { Member, MemberProps } from './Member';
+import { ModalView } from './ModalView';
 import { Profile } from './Profile';
 import { SmallInput } from './SmallInput';
 import { TextArea } from './TextArea';
@@ -25,12 +27,14 @@ export {
   ButtonIcon,
   Category,
   CategorySelect,
-  GuildIcon,
+  Guild,
+  GuildLogo,
   Header,
   ListDivider,
   ListHeader,
   Member,
   MemberProps,
+  ModalView,
   Profile,
   SmallInput,
   TextArea,

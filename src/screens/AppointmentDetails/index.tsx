@@ -23,10 +23,10 @@ import { theme } from '../../global/styles/theme';
 
 export function AppointmentDetails() {
   const handleShare = () => { };
-  const menbers = Array.from({ length: 10 }, (_, index) => ({
+  const members = Array.from({ length: 10 }, (_, index) => ({
     id: `${index}`,
     username: 'Flávio',
-    avatar_url: 'https://github.com/FlavioMiyaji.png',
+    avatar_uri: 'https://github.com/FlavioMiyaji.png',
     status: ((index + 1) % 2 == 0) ? 'offline' : 'online',
   }));
   return (
@@ -64,8 +64,8 @@ export function AppointmentDetails() {
           subtitle="Total 3"
         />
         <FlatList
-          contentContainerStyle={styles.menbers}
-          data={menbers}
+          contentContainerStyle={styles.members}
+          data={members}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
             <Member data={item} />
